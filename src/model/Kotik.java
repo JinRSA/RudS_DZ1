@@ -105,8 +105,8 @@ public class Kotik {
                 isStarving = !isStarving;
             }
             else {
-                int id = (int)(Math.random() * methods.length);
-                isStarving = !methods[id].doing();
+                int id = (int)(Math.random() * m_methods.length);
+                isStarving = !m_methods[id].doing();
             }
         }
     }
@@ -114,7 +114,7 @@ public class Kotik {
 //region Members.
     private int m_prettiness, m_weight;
     private String m_name, m_meow;
-    protected Op[] methods = { this::play, this::sleep, this::chaseMouse, this::draw };
+    protected Op[] m_methods = { this::play, this::sleep, this::chaseMouse, this::draw };
     protected byte m_satiety = (byte)100;
     private static byte s_count;
 //endregion
